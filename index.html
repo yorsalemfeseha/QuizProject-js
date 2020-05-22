@@ -1,32 +1,298 @@
 <!DOCTYPE html>
-<html lang="eng">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie.edge">
-  <title> General Knowledge Quiz </title>
-  </head>
-<body>
-  <div class="container">
-    <div id="Question-container" class="hide">
-      <div id="Question">Question</div>
-      <div class="Answer-Button" class="button-grid">
-        <button class="button"> Answer 1</button>
-        <button class="button"> Answer 2</button>
-        <button class="button"> Answer 3</button>
-        <button class="button"> Answer 4</button>
+<html>
+<title>QuizNight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/QuizStyles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+<!-- Sidebar on click -->
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>QuizNight</a>
+  <a href="#aboutUs" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button href="categories" class="w3-button" title="Notifications">Categories<i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Netflix</a>
+      <a href="#" class="w3-bar-item w3-button">General Knowledge</a>
+      <a href="#" class="w3-bar-item w3-button">Riddles</a>
+      <a href="#" class="w3-bar-item w3-button">Geography</a>
+
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Suggest</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#aboutUs" class="w3-bar-item w3-button">About</a>
+    <a href="#categories" class="w3-bar-item w3-button">Categories</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Suggest</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="Images/Geography.jpg" alt="Quiz" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">QuizNight</button>
+  </div>
+</div>
+<!-- About US -->
+
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="aboutUs">
+
+<div class="w3-quarter">
+<h2>About Us</h2>
+<p>QuizNight is an online quiz application which enables you to challenge yourself, your family and friends to a friendly (or not so friendly) quiz varying from many different categories and challenges. <br>QuizNight is a fun filled website which came about due Covid-19 - we hope to provide you a sense of entertainment during these trying times </p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="Images/Missionstatement.png" alt="Snow" style="width:100%" class="Mstatement">
+  <div class="w3-container">
+  <h3>Mission Statement</h3>
+  <h4>Provide long-lasting memories</h4>
+  <p>Provide entertainment</p>
+  <p>increase your knowledge</p>
+  <br>
+  <br>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="Images/What2expect.png" alt="Lights" style="width:100%" class="W2E">
+  <div class="w3-container">
+  <h3>What to Expect</h3>
+  <h4>Challenges</h4>
+  <p>Varying topics</p>
+  <p>family friendly</p>
+  <p>Bring your competitive spirit</p>
+  </div>
+  </div>
+</div>
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+<img src="Images/family.png" alt="Lights" style="width:100%" class="Family">
+  <div class="w3-container">
+  <h3>What to Expect</h3>
+  <h4>Consistancy</h4>
+  <p>Regular Updates of quizes</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <style="position:absolute;top:-28px;right:24px">
+</div>
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="categories">
+    <h2>Categories</h2>
+    <p>Choose a category that best suits your mood.</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme colorTheme">
+          <p class="w3-xlarge">Netflix <img src="Images/netflix-logo.png" class="img-Netflix"></p>
+        </li>
+        <li class="w3-padding-16"><b>Popular</b> Tv Series</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-theme-l5 w3-padding-24 colorTheme">
+          <button class="w3-button w3-padding-large colorTheme"><i class="fa fa-check"></i> Play Netflix Quiz</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Geography <img src="Images/globe2.png" class="img-Geography"></p>
+        </li>
+        <li class="w3-padding-16"><b>195</b> Countries</li>
+        <li class="w3-padding-16"><b>7</b> Continents</li>
+        <li class="w3-padding-16"><b>Explore</b> the globe</li>
+        <li class="w3-theme-l5 w3-padding-24 middleColor">
+          <button class="w3-button middleColor w3-padding-large"><i class="fa fa-check"></i> Explore the globe with this quiz</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme colorTheme">
+          <p class="w3-xlarge">Riddles <img src="Images/riddle.png" class="img-Riddle"></p>
+        </li>
+        <li class="w3-padding-16"><b>50</b> Riddles</li>
+        <li class="w3-padding-16"><b>3</b> Levels</li>
+        <li class="w3-padding-16"><b>5</b> chances </li>
+        <li class="w3-theme-l5 w3-padding-24 colorTheme">
+          <button class="w3-button w3-padding-large colorTheme"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+</div>
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <style="position:absolute;top:-28px;right:24px">
+</div>
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme colorTheme">
+          <p class="w3-xlarge">Netflix <img src="Images/netflix-logo.png" class="img-Netflix"></p>
+        </li>
+        <li class="w3-padding-16"><b>Popular</b> Tv Series</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-theme-l5 w3-padding-24 colorTheme">
+          <button class="w3-button colorTheme w3-padding-large colorTheme"><i class="fa fa-check"></i> Play Netflix Quiz</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Geography <img src="Images/globe2.png" class="img-Geography"></p>
+        </li>
+        <li class="w3-padding-16"><b>195</b> Countries</li>
+        <li class="w3-padding-16"><b>7</b> Continents</li>
+        <li class="w3-padding-16"><b>Explore</b> the globe</li>
+        <li class="w3-theme-l5 w3-padding-24 middleColor">
+          <button class="w3-button middleColor w3-padding-large"><i class="fa fa-check"></i> Explore the globe with this quiz</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme colorTheme">
+          <p class="w3-xlarge">Riddles <img src="Images/riddle.png" class="img-Riddle"></p>
+        </li>
+        <li class="w3-padding-16"><b>50</b> Riddles</li>
+        <li class="w3-padding-16"><b>3</b> Levels</li>
+        <li class="w3-padding-16"><b>5</b> chances</li>
+        <li class="w3-theme-l5 w3-padding-24 colorTheme">
+          <button class="w3-button colorTheme w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+        </li>
+      </ul>
+    </div>
+</div>
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>If you would like to suggest a topic please email us, text us or write to us.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Address?</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  Number</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Email</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
       </div>
-
-
-    </div>
-    <div class="controls">
-      <button id="Start-Button" class="Start-Button Button">Start</button>
-      <button id="Next-Button" class="Next-Button Button hide">Next</button>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-right w3-theme buttonEdit">Send</button>
+      </form>
     </div>
   </div>
+</div>
 
-  <div class="">
+<!-- Image of location/map -->
+<img src="Images/Geography.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p> <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">QuizNight.co.uk</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
+</footer>
+
+<script>
+// Script for side navigation
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
 </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>QuizNight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/QuizStyles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<body id="myPage">
+
+<!-- Sidebar on click -->
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>QuizNight</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button href="categories" class="w3-button" title="Notifications">Categories<i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Netflix</a>
+      <a href="#" class="w3-bar-item w3-button">General Knowledge</a>
+      <a href="#" class="w3-bar-item w3-button">Riddles</a>
+      <a href="#" class="w3-bar-item w3-button">Geography</a>
+
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#aboutUs" class="w3-bar-item w3-button">About</a>
+    <a href="#categories" class="w3-bar-item w3-button">Categories</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Suggest</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+<br>
+<br>
+<!-- Quiz -->
+<div class="quiz-home custom-box">
+  <h4>You will have 15 seconds to answer each question.</h4>
+  <button type="button" class="start-Quiz-btn btn">Start Netflix Quiz</button>
+</div>
+<div class="quiz-box custom-box">
+  <div class="stats">
+    <div class="quiz-time">
+      <div class="countdownTimer">15</div>
+    </div>
+    <div class="score-board">
+      <span class="scoreCheck">Score:</span>
+      <span class="correctAnswers">0</span>
+    </div>
+  </div>
+    <div class="questionBox">
+      <div class="quizNumber"> 1/20
+      </div>
+      <div class="question-text">
+        Casa de Papel is the original Spanish title of which hit Netflix series?
+      </div>
+    </div>
+      <div class="optionBox">
+        <div class="options">Narcos</div>
+        <div class="options">Money Heist</div>
+        <div class="options">Elite</div>
+        <div class="options">Cable Girls</div>
+      </div>
+      <div class="answer-description"> Casa de Papel is the original Spanish Title of Money Heist</div>
+      <div class="">
+
+      </div>
+      <div class="nextQuestion">
+        <button type="button" class="nextQuestio-btn btn">Next Question</button>
+        <button type="button" class="seeResult-btn btn">See your Result</button>
+
+      </div>
+
+      </div>
+    </div>
+<div class="endQuiz custom-box">
+  <h1>QuizNight Result</h1>
+  <h4>Total Questions: <span class="totalQuestions">20</span></h4>
+  <h4>Questions attempted: <span class="totalAttempts">20</span></h4>
+  <h4>Questions correct: <span class="totalCorrect">10</span></h4>
+  <h4>Questions wrong: <span class="totalWrong">10</span></h4>
+  <h4>Percentage: <span class="Percentage">50%</span></h4>
+  <button type="button" class="repeat-btn btn">Start Again</button>
+  <button type="button" class="Homepage-btn btn">Home</button>
+
+
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p> <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">QuizNight.co.uk</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script src="Game.js">
+
+</script>
+
+</body>
+</html>
